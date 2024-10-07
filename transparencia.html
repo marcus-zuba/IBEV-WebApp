@@ -9,6 +9,21 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- CSS Global -->
     <link rel="stylesheet" href="style.css">
+    <style>
+        .form-inline {
+            margin-bottom: 20px;
+        }
+        .table thead th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .table td, .table th {
+            text-align: center;
+        }
+        .filter-container {
+            margin: 20px 0;
+        }
+    </style>
 </head>
 <body>
 
@@ -34,53 +49,105 @@
         </div>
     </header>
 
-    <!-- Main Content -->
-    <div class="content">
-        <div class="container">
-            <h2>Prestação de Contas</h2>
-            <p>Abaixo estão as informações detalhadas de receitas e despesas da nossa igreja. Prezamos pela transparência e responsabilidade com as doações recebidas.</p>
+    <!-- Conteúdo principal -->
+    <div class="container mt-4">
+        <h2 class="mb-4">Transparência Financeira</h2>
 
-            <div class="table-container">
-                <h4>Receitas e Despesas Mensais</h4>
-                <div class="table-responsive">
-                    <table class="table table-bordered table-striped">
-                        <thead>
-                            <tr>
-                                <th>Mês</th>
-                                <th>Receitas (R$)</th>
-                                <th>Despesas (R$)</th>
-                                <th>Saldo (R$)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Janeiro 2024</td>
-                                <td>R$ 15.000,00</td>
-                                <td>R$ 12.000,00</td>
-                                <td>R$ 3.000,00</td>
-                            </tr>
-                            <tr>
-                                <td>Fevereiro 2024</td>
-                                <td>R$ 13.500,00</td>
-                                <td>R$ 11.500,00</td>
-                                <td>R$ 2.000,00</td>
-                            </tr>
-                            <!-- Adicione mais linhas conforme necessário -->
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+        <!-- Filtros por mês e ano -->
+        <div class="filter-container">
+            <form class="form-inline">
+                <label for="mes" class="mr-2">Mês:</label>
+                <select class="form-control mr-3" id="mes">
+                    <option value="01">Janeiro</option>
+                    <option value="02">Fevereiro</option>
+                    <option value="03">Março</option>
+                    <option value="04">Abril</option>
+                    <option value="05">Maio</option>
+                    <option value="06">Junho</option>
+                    <option value="07">Julho</option>
+                    <option value="08">Agosto</option>
+                    <option value="09">Setembro</option>
+                    <option value="10">Outubro</option>
+                    <option value="11">Novembro</option>
+                    <option value="12">Dezembro</option>
+                </select>
 
-            <div class="table-container">
-                <h4>Principais Projetos</h4>
-                <ul>
-                    <li>Construção de novo salão de eventos - Orçamento: R$ 50.000,00</li>
-                    <li>Campanha de arrecadação para famílias carentes - Meta: R$ 10.000,00</li>
-                    <li>Obras de manutenção da igreja - Orçamento: R$ 5.000,00</li>
-                    <!-- Adicione mais projetos conforme necessário -->
-                </ul>
-            </div>
+                <label for="ano" class="mr-2">Ano:</label>
+                <select class="form-control mr-3" id="ano">
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                </select>
+
+                <button type="button" class="btn btn-primary">Filtrar</button>
+            </form>
         </div>
+
+        <!-- Tabela de Receitas -->
+        <h3>Receitas</h3>
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Descrição</th>
+                    <th>Valor (R$)</th>
+                    <th>Fonte</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>02/10/2024</td>
+                    <td>Doações do Culto de Domingo</td>
+                    <td>R$ 2.500,00</td>
+                    <td>Fiéis</td>
+                </tr>
+                <tr>
+                    <td>10/10/2024</td>
+                    <td>Contribuições Mensais</td>
+                    <td>R$ 3.800,00</td>
+                    <td>Fiéis</td>
+                </tr>
+                <tr>
+                    <td>15/10/2024</td>
+                    <td>Evento Beneficente</td>
+                    <td>R$ 1.200,00</td>
+                    <td>Fiéis</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Tabela de Despesas -->
+        <h3>Despesas</h3>
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Descrição</th>
+                    <th>Valor (R$)</th>
+                    <th>Categoria</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>05/10/2024</td>
+                    <td>Pagamento de Contas (Água/Luz)</td>
+                    <td>R$ 1.000,00</td>
+                    <td>Infraestrutura</td>
+                </tr>
+                <tr>
+                    <td>12/10/2024</td>
+                    <td>Manutenção do Templo</td>
+                    <td>R$ 2.300,00</td>
+                    <td>Manutenção</td>
+                </tr>
+                <tr>
+                    <td>18/10/2024</td>
+                    <td>Compra de Materiais para Projeto Social</td>
+                    <td>R$ 1.500,00</td>
+                    <td>Projeto Social</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
     <!-- Footer -->
