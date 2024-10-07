@@ -1,0 +1,79 @@
+/* Reseta margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definições básicas */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 0;
+}
+
+/* Footer (Sticky) */
+.footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto; /* Mantém o footer no final */
+}
+
+/* Carousel */
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.carousel-icon {
+    font-size: 50px;
+    color: #FFD700;
+}
+
+.carousel-text {
+    color: white;
+}
+
+.carousel-indicators li {
+    background-color: #4CAF50;
+}
+
+/* Conteúdo da página */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* Formulários */
+.form-section {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .carousel-caption {
+        font-size: 14px;
+    }
+
+    .carousel-icon {
+        font-size: 40px;
+    }
+}

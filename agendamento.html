@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>IBEV - Agendamento Gabinete Pastoral</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS Global -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand text-white" href="#">IBEV - Igreja Batista Esperança e Vida</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="index.html">Página Inicial</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="transparencia.html">Transparência</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Formulário de Agendamento -->
+        <div class="container mt-5" class="content">
+            <div class="form-section">
+                <h2 class="text-center">Agendamento para Gabinete Pastoral</h2>
+                <p class="text-center">Preencha o formulário abaixo para agendar um horário com um de nossos pastores.</p>
+                
+                <form>
+                    <div class="form-group">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" class="form-control" id="nome" placeholder="Digite seu nome completo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Digite seu email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" class="form-control" id="telefone" placeholder="Digite seu telefone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pastor">Escolha o Pastor</label>
+                        <select class="form-control" id="pastor" required>
+                            <option value="">Selecione um pastor</option>
+                            <option value="pastor1">Pastor João Silva</option>
+                            <option value="pastor2">Pastor Maria Oliveira</option>
+                            <option value="pastor3">Pastor Pedro Souza</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="data">Escolha uma Data</label>
+                        <input type="date" class="form-control" id="data" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hora">Escolha um Horário</label>
+                        <input type="time" class="form-control" id="hora" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="motivo">Motivo do Atendimento</label>
+                        <textarea class="form-control" id="motivo" rows="4" placeholder="Explique o motivo do seu agendamento" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Enviar Solicitação</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Igreja Batista Esperança e Vida. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
